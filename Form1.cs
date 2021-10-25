@@ -113,5 +113,25 @@ namespace _4_10_Forma1
             }
             osvezi();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SqlConnection veza = new SqlConnection(CS);
+            // MessageBox.Show("UPDATE Ucenik SET ime=" + txt_ime.Text + ", prezime=" + txt_prezime.Text + ", ocena=" + txt_ocena.Text + " WHERE id=" + txt_ID.Text);
+
+            SqlCommand naredba = new SqlCommand("INSERT INTO Ucenik (ime, prezime, ocena) VALUES ('" + txt_ime.Text + "', '" + txt_prezime.Text + "', " + txt_ocena.Text + ") ", veza);
+            // MessageBox.Show("INSERT INTO Ucenik (ime, prezime, ocena) VALUES ('" + txt_ime.Text + "', '" + txt_prezime.Text + "', " + txt_ocena.Text +") ");
+            
+            veza.Open();
+            naredba.ExecuteNonQuery();
+            veza.Close();
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Ucenik ORDER BY ID", veza);
+            podaci.Clear();
+            adapter.Fill(podaci);
+            red = podaci.Rows.Count - 1;
+            osvezi();
+            
+        }
+            
     }
 }
