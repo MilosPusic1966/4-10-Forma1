@@ -64,5 +64,22 @@ namespace _4_10_Forma1
             red = 0;
             osvezi();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SqlConnection veza = new SqlConnection(CS);
+            SqlCommand naredba = new SqlCommand("DELETE FROM Ucenik WHERE ID=" + txt_ID.Text, veza);
+            veza.Open();
+            naredba.ExecuteNonQuery();
+            veza.Close();
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Ucenik", veza);
+            podaci.Clear();
+            adapter.Fill(podaci);
+            if (red > podaci.Rows.Count-1)
+            {
+                red = podaci.Rows.Count - 1;
+            }
+            osvezi();
+        }
     }
 }
