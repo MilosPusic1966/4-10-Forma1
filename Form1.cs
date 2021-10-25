@@ -26,6 +26,10 @@ namespace _4_10_Forma1
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Ucenik", veza);
             adapter.Fill(podaci);
             //MessageBox.Show(podaci.Rows.Count.ToString());
+            txt_ID.Text = podaci.Rows[0]["ID"].ToString();
+            txt_ime.Text = podaci.Rows[0]["ime"].ToString();
+            txt_prezime.Text = podaci.Rows[0]["prezime"].ToString();
+            txt_ocena.Text = podaci.Rows[0]["ocena"].ToString();
         }
     }
 }
