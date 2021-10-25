@@ -26,8 +26,11 @@ namespace _4_10_Forma1
             txt_ime.Text = podaci.Rows[red]["ime"].ToString();
             txt_prezime.Text = podaci.Rows[red]["prezime"].ToString();
             txt_ocena.Text = podaci.Rows[red]["ocena"].ToString();
-            if (red == podaci.Rows.Count - 1)               button1.Enabled = false;
-            button1.Enabled = true;
+            button1.Enabled = (red != podaci.Rows.Count - 1);
+            button6.Enabled = (red != podaci.Rows.Count - 1);
+            button2.Enabled = (red != 0);
+            button7.Enabled = (red != 0);
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -41,7 +44,24 @@ namespace _4_10_Forma1
         private void button1_Click(object sender, EventArgs e)
         {
             red++;
-            
+            osvezi();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            red = podaci.Rows.Count - 1;
+            osvezi();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            red--;
+            osvezi();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            red = 0;
             osvezi();
         }
     }

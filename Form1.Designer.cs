@@ -129,6 +129,7 @@ namespace _4_10_Forma1
             this.button2.TabIndex = 9;
             this.button2.Text = "<";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -165,6 +166,7 @@ namespace _4_10_Forma1
             this.button6.TabIndex = 13;
             this.button6.Text = ">>";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -174,6 +176,7 @@ namespace _4_10_Forma1
             this.button7.TabIndex = 14;
             this.button7.Text = "<<";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Form1
             // 
