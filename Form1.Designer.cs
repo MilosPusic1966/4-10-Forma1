@@ -148,6 +148,7 @@ namespace _4_10_Forma1
             this.button4.TabIndex = 11;
             this.button4.Text = "Promeni";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
