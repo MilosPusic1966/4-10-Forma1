@@ -1,7 +1,7 @@
 ﻿
 namespace _4_10_Forma1
 {
-    partial class Form1
+    partial class Osoba
     {
         /// <summary>
         /// Required designer variable.

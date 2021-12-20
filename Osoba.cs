@@ -8,15 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace _4_10_Forma1
 {
-    public partial class Form1 : Form
+    public partial class Osoba : Form
     {
-        string CS = "Data source=INF_4_PROFESOR\\SQLPBG; Initial catalog=MilosP2021; Integrated security=true";
+        string CS = ConfigurationManager.ConnectionStrings["CS"].ToString();
         DataTable podaci = new DataTable();
         int red = 0;
-        public Form1()
+        public Osoba()
         {
             InitializeComponent();
         }
