@@ -28,5 +28,17 @@ namespace _4_10_Forma1
         {
             Application.Exit();
         }
+
+        private void skGodineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            skgodina nova = new skgodina("sk_godina");
+            nova.ShowDialog();
+        }
+
+        private void odeljenjeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            skgodina nova = new skgodina("predmet");
+            nova.ShowDialog();
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace _4_10_Forma1
 {
     public partial class Osoba : Form
     {
-        string CS = ConfigurationManager.ConnectionStrings["CS"].ToString();
+        string CS = ConfigurationManager.ConnectionStrings["CS"].ConnectionString;
         DataTable podaci = new DataTable();
         int red = 0;
         public Osoba()
